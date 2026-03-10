@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import '../styles/home.css'
 
 function Home() {
+  const logoSrc = `${import.meta.env.BASE_URL}clover-logo.png`
+
   return (
     <section className="home-page" aria-label="Clover Home">
       <svg
@@ -30,7 +32,7 @@ function Home() {
         <div className="home-hero">
           <div className="home-logo-wrap" aria-hidden="true">
             <div className="logo-cream-ring" />
-            <img src="/clover-logo.png" alt="" className="home-logo" />
+            <img src={logoSrc} alt="" className="home-logo" />
           </div>
 
           <div className="home-right">
