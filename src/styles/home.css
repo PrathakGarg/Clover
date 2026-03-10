@@ -70,7 +70,6 @@
   max-width: 50rem;
   aspect-ratio: 1 / 1;
   justify-self: center;
-  animation: riseIn 700ms ease-out both;
 }
 
 .logo-cream-ring {
