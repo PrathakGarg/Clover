@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@400;500;600;700&family=Inter:wght@400;500;700&display=swap');
+
 :root {
   --bg: #fffbea;
   --orange: #fb6d01;
@@ -30,6 +32,62 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.app-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2rem;
+  color: var(--orange);
+}
+
+.app-nav--light {
+  color: #fffacd;
+}
+
+.app-nav-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.app-nav-logo {
+  width: 2.25rem;
+  height: 2.25rem;
+  object-fit: contain;
+}
+
+.app-nav-wordmark {
+  font-family: 'Gluten', cursive;
+  font-size: 2.5rem;
+  letter-spacing: 0.06em;
+  line-height: 1;
+}
+
+.app-nav-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.app-nav-link {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.92;
+}
+
+.app-nav-link.active {
+  text-decoration: underline;
+  text-underline-offset: 0.26em;
 }
 
 .simple-page {

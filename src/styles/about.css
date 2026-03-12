@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@400;500;600;700&display=swap');
+
+.about-page {
+  --about-scale: 1.6;
+  min-height: 100vh;
+  background: #fb6d01;
+  color: #fffacd;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  overflow: hidden;
+}
+
+.about-left {
+  --about-circle-size: calc(min(50vw, 760px) * var(--about-scale));
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 1.2vw 10vh 5vw;
+}
+
+.about-circle-stack {
+  position: relative;
+  width: var(--about-circle-size);
+  aspect-ratio: 1 / 1;
+  transform: translateY(18%);
+}
+
+.about-arc-css {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-100%);
+  --arc-radius: calc(var(--about-circle-size) * 0.48);
+  --arc-step: 10deg;
+}
+
+.arc-char {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  --i: 0;
+  --rot: calc(var(--i) * var(--arc-step));
+  transform: translateX(-50%) rotate(var(--rot));
+  transform-origin: 50% calc(100% + var(--arc-radius));
+  font-family: 'Gluten', cursive;
+  font-size: calc(var(--about-circle-size) * 0.14);
+  letter-spacing: 0.18em;
+  color: #fffacd;
+  font-weight: 500;
+}
+
+.arc-1 {
+  --i: -3.2;
+}
+
+.arc-2 {
+  --i: -2.2;
+}
+
+.arc-3 {
+  --i: -1.2;
+}
+
+.arc-4 {
+  --i: -0.2;
+}
+
+.arc-5 {
+  --i: 0.7;
+}
+
+.arc-6 {
+  --i: 1.4;
+}
+
+.arc-7 {
+  --i: 2.1;
+}
+
+.arc-8 {
+  --i: 3;
+}
+
+.arc-gap {
+  opacity: 0;
+}
+
+.about-circle {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: #fffacd;
+  display: grid;
+  place-items: center;
+  padding: 16% 13%;
+}
+
+.about-circle-copy {
+  color: #fb6d01;
+  text-align: center;
+  font-family: 'Glacial Indifference', 'Trebuchet MS', sans-serif;
+}
+
+.about-circle-copy h2 {
+  margin: 0;
+  font-size: 2.15rem;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.about-circle-copy p {
+  margin: 2.25rem 0 0;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+}
+
+.about-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 35vh 5.6vw 7vh 2vw;
+}
+
+.about-right p {
+  margin: 0;
+  max-width: 43ch;
+  color: #fffacd;
+  text-align: right;
+  font-family: 'Glacial Indifference', 'Trebuchet MS', sans-serif;
+  font-size: 2rem;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 1200px) {
+  .about-page {
+    --about-scale: 1;
+  }
+
+  .about-circle-copy h2 {
+    font-size: 1.85rem;
+  }
+
+  .about-circle-copy p,
+  .about-right p {
+    font-size: 1.24rem;
+  }
+}
+
+@media (max-width: 920px) {
+  .about-page {
+    grid-template-columns: 1fr;
+  }
+
+  .about-left {
+    --about-circle-size: min(88vw, 720px);
+    min-height: 66vh;
+    padding-top: 1.5rem;
+  }
+
+  .about-circle-stack {
+    transform: translateY(12%);
+  }
+
+  .arc-char {
+    letter-spacing: 0.14em;
+  }
+
+  .about-circle {
+    transform: translateY(12%);
+  }
+
+  .about-right {
+    padding: 2.3rem 1.3rem 2.5rem;
+  }
+
+  .about-right p {
+    max-width: 40ch;
+    font-size: 1.12rem;
+  }
+}
