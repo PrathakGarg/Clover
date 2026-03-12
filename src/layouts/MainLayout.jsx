@@ -2,6 +2,7 @@ import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
 
 function MainLayout() {
   const { pathname } = useLocation()
+  const baseUrl = import.meta.env.BASE_URL
   const showNavbar = pathname !== '/'
   const isAboutPage = pathname === '/about'
 
@@ -10,7 +11,7 @@ function MainLayout() {
       {showNavbar && (
         <header className={`app-nav ${isAboutPage ? 'app-nav--light' : ''}`}>
           <Link to="/" className="app-nav-brand" aria-label="Go to home">
-            <img src="/clover-logo.png" alt="Clover logo" className="app-nav-logo" />
+            <img src={`${baseUrl}clover-logo.png`} alt="Clover logo" className="app-nav-logo" />
             <span className="app-nav-wordmark">CLOVER</span>
           </Link>
 
