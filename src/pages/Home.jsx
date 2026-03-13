@@ -31,6 +31,7 @@ function Home() {
 
         <div className="home-hero">
           <div className="home-logo-wrap" aria-hidden="true">
+            <div className="home-logo-hitarea" />
             <div className="logo-cream-ring" />
             <img src={logoSrc} alt="" className="home-logo" />
           </div>

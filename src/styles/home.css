@@ -72,6 +72,14 @@
   justify-self: center;
 }
 
+.home-logo-hitarea {
+  grid-area: 1 / 1;
+  width: 57%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  z-index: 3;
+}
+
 .logo-cream-ring {
   grid-area: 1 / 1;
   width: 57%;
@@ -87,6 +95,12 @@
   height: 100%;
   object-fit: contain;
   filter: drop-shadow(0 10px 12px rgba(186, 211, 154, 0.42));
+  transition: transform 850ms ease;
+  animation: logoLoadSpin 700ms ease-out 120ms;
+}
+
+.home-logo-hitarea:hover ~ .home-logo {
+  transform: rotate(360deg);
 }
 
 .home-content {
@@ -226,5 +240,19 @@
 @keyframes dashFlow {
   to {
     stroke-dashoffset: -60;
+  }
+}
+
+@keyframes logoLoadSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  45% {
+    transform: rotate(14deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
   }
 }
